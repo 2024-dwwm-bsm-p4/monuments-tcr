@@ -119,8 +119,22 @@ div.footer{
 background-color: black;
 width: 1450px;
 height: 330px;
-margin-bottom: 50px;
 padding: 40px;
+}
+
+#map { 
+    height: 725px; 
+    width: 325px;
+}
+
+.mapcontainer {
+    margin-left: 35px;
+    width: 1450px;
+    height: 330px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
 }
 
 #root,
