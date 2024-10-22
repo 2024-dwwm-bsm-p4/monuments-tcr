@@ -37,7 +37,7 @@ svg {
     border : 2px solid #000000;
     width: 290px;
     height: 300px;
-    aspect-ratio: 1 / 1;
+    margin-bottom: 50px;
 }
 
 main{
@@ -70,18 +70,33 @@ button {
     margin-bottom: 35px;
 }   
 
-p,
 h1,
-h2,
-h3,
-h4,
 h5,
 h6 {
     overflow-wrap: break-word;
     display: flex;
     text-align: center;
     justify-content: center;
-    font-size: 70px;
+    font-size: 65px;
+}
+
+h2{
+color: white;
+font-size: 70px;
+}
+
+h3{
+    color: white;
+    font-size: 30px;
+}
+
+h4{
+    color: white;
+    font-size: 20px;
+}
+
+p{
+    color: white;
 }
 
 h5{
@@ -95,7 +110,37 @@ a {
     color: unset;
 }
 
+footer  {
+    display: flex;
+    justify-content: center;
+}
+
+div.footer{
+background-color: black;
+width: 1450px;
+height: 330px;
+margin-bottom: 50px;
+padding: 40px;
+}
+
 #root,
 #__next {
     isolation: isolate;
 }
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Application de l'animation sur l'élément */
+  .element-appear-left {
+    animation: slideInFromLeft 1s ease-out;
+    /* Vous pouvez ajuster la durée, par exemple 1s */
+  }
