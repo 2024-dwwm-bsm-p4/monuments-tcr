@@ -115,16 +115,18 @@ footer  {
     justify-content: center;
 }
 
-div.footer{
-background-color: black;
-width: 1450px;
-height: 330px;
-padding: 40px;
-}
+div.footer {
+    background-color: black;
+    width: 1450px;
+    height: 500px;
+    padding: 40px;
+    position: relative; /* Garder la div stable */
+  }
 
 #map { 
-    height: 725px; 
-    width: 325px;
+    height: 400px; 
+    width: 400px;
+    bottom:90px
 }
 
 .mapcontainer {
@@ -153,8 +155,18 @@ padding: 40px;
     }
   }
   
-  /* Application de l'animation sur l'élément */
   .element-appear-left {
     animation: slideInFromLeft 1s ease-out;
-    /* Vous pouvez ajuster la durée, par exemple 1s */
+  }
+
+  /* Initialement masqué à gauche */
+  .affichage-content {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.6s ease-out;
+  }
+  
+  .affichage-content.element-appear-left {
+    opacity: 1;
+    transform: translateX(0); /* Anime seulement le texte */
   }
